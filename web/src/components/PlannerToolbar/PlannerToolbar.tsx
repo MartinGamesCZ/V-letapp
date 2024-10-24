@@ -174,7 +174,7 @@ export default function PlannerToolbar(props: IPlannerToolbarProps) {
               </div>
             </CardHeader>
             <CardContent>
-              <ScrollArea className={styles.categoryScroll}>
+              <ScrollArea className={styles.categoryScrollTrip}>
                 <div className={styles.categoryListPlaces}>
                   {props.tripPlaces.map((plc, i) => {
                     return (
