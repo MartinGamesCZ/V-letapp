@@ -143,9 +143,16 @@ function Route({ coordinates, i }: { coordinates: any[]; i: number }) {
         } as any
       }
       style={{
-        color: ["red", "blue", "green", "purple", "orange", "yellow", "black"][
-          i % 7
-        ],
+        color:
+          [
+            "#5F0F40",
+            "#9A031E",
+            "#FB8B24",
+            "#E36414",
+            "#0F4C5C",
+            "#000000",
+            "#0F4C5C",
+          ][i % 7] + "ff",
       }}
     />
   );
