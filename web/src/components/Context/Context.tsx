@@ -38,9 +38,15 @@ export default function Context(props: IContextProps) {
   const trip = useStore(useDataStore, (s) => s.trip);
 
   useEffect(() => {
-    // Bad, bad t-mobile! Messing with our location!!!! We will fake it for now.
-    setULoc(fakePosition);
-    // Geobee.geolocate().then((loc) => setULoc([loc.at, loc.lon]));
+    Geobee.geolocate().then((loc) => {
+      setULoc([loc.lat, loc.lon]);
+
+      if (typeof window != "undefined") {
+        window.navigator.geolocation.getCurrentPosition((p) => {
+          setULoc([p.coords.latitude, p.coords.longitude]);
+        });
+      }
+    });
   }, []);
 
   useEffect(() => {
