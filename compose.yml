@@ -1,0 +1,72 @@
+services:
+  osrm:
+    tty: true
+    networks:
+      shared:
+        ipv4_address: 10.5.0.4
+    ports:
+      - 5000:5000
+    volumes:
+      - /home/marti/OSRM:/data
+    image: ghcr.io/project-osrm/osrm-backend
+    command:
+      - osrm-routed
+      - --algorithm
+      - mld
+      - /data/czech-republic-latest.osrm
+    restart: always
+  postgres:
+    tty: true
+    networks:
+      shared:
+        ipv4_address: 10.5.0.5
+    ports:
+      - 5432:5432/tcp
+    volumes:
+      - ./database:/var/lib/postgresql/data
+    env_file: .env
+    image: pgvector/pgvector:pg17
+    restart: always
+  web:
+    tty: true
+    networks:
+      shared:
+        ipv4_address: 10.5.0.2
+    volumes:
+      - ./web:/home/bun/app
+    ports:
+      - 3000:3000
+    image: oven/bun
+    command:
+      - dev
+    depends_on:
+      - postgres
+      - osrm
+      - backend
+    restart: always
+  backend:
+    tty: true
+    networks:
+      shared:
+        ipv4_address: 10.5.0.6
+    volumes:
+      - ./backend:/home/bun/app
+    ports:
+      - 3001:3000
+    image: oven/bun
+    command:
+      - start:dev
+    depends_on:
+      - postgres
+      - osrm
+    env_file:
+      - .env
+    restart: always
+
+networks:
+  shared:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.5.0.0/16
+          gateway: 10.5.0.1

@@ -1,0 +1,16 @@
+@import "@/styles/config.scss";
+
+.root {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+
+  padding: 2rem;
+
+  padding-top: calc($nav_height + 2rem);
+
+  overflow: hidden;
+}

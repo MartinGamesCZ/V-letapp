@@ -1,0 +1,57 @@
+@import "@/styles/config.scss";
+
+.root {
+  width: 100vw;
+  height: $nav_height;
+
+  border-bottom: 1px solid #ddd;
+
+  display: flex;
+  flex-direction: row;
+
+  padding: 0 2rem;
+
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  z-index: 100;
+
+  background: hsl(var(--background));
+
+  .logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    h3 {
+      font-size: 1.8rem;
+      font-weight: 500;
+    }
+  }
+
+  .links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+
+    margin-left: auto;
+
+    a {
+      font-size: 1.2rem;
+    }
+  }
+
+  .search {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 500px;
+  }
+}

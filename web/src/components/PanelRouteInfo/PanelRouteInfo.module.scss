@@ -1,0 +1,30 @@
+.root {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+
+  padding-left: 50%;
+}
+
+.line {
+  width: 3px;
+  height: 70px;
+
+  background-color: #aba;
+  border-radius: 50px;
+}
+
+.text {
+  height: 70px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  color: #345;
+
+  span {
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+}

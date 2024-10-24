@@ -1,0 +1,63 @@
+@import "@/styles/config.scss";
+
+$t_width: calc(30vw - 2rem - 2rem / 2);
+$t_height: calc(100vh - 2 * 2rem);
+$c_width: 100%;
+$c_height: calc(100vh - 36px - 1rem - $nav_height - 2rem * 2);
+
+.root {
+  width: $t_width;
+  height: $t_height;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  .card {
+    width: $c_width;
+    height: $c_height;
+  }
+
+  .categoryList {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .categoryListPlaces {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .categoryScroll {
+    height: calc($c_height - 90px - 1rem);
+    max-height: calc($c_height - 90px - 1rem - 50px);
+
+    padding-right: 1rem;
+    padding-left: 0.5rem;
+  }
+
+  .categoryScrollPlaces {
+    height: calc($c_height - 90px - 1rem);
+    max-height: calc($c_height - 90px - 1rem - 44px - 1rem);
+
+    padding-right: 1rem;
+    padding-left: 0.5rem;
+  }
+
+  .uLoc {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .nav_bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    gap: 1rem;
+
+    margin-top: 1rem !important;
+  }
+}

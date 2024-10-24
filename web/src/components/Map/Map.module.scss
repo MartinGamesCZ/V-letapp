@@ -1,0 +1,20 @@
+@import "@/styles/config.scss";
+
+$map_width: calc(70vw - 2rem - 2rem / 2);
+$map_height: calc(100vh - 2 * 2rem - $nav_height);
+
+.root {
+  width: $map_width;
+  height: $map_height;
+
+  border-radius: 10px;
+}
+
+.loader {
+  width: $map_width;
+  height: $map_height;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
