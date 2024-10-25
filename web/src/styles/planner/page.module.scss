@@ -13,4 +13,23 @@
   padding-top: calc($nav_height + 2rem);
 
   overflow: hidden;
+
+  .unsupported_message {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .root {
+    div {
+      display: none;
+    }
+
+    .unsupported_message {
+      display: flex;
+
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+  }
 }

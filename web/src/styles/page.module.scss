@@ -44,7 +44,7 @@
     top: calc(80%);
     left: 50%;
 
-    max-height: 1rem;
+    max-height: 3rem;
 
     transform: translate(-50%, -50%);
 
@@ -56,5 +56,48 @@
     -webkit-text-fill-color: transparent;
 
     font-weight: 700;
+  }
+
+  .unsupported_message {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .heading {
+    padding: 2rem;
+
+    h1 {
+      font-size: 3rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    div {
+      display: none;
+      position: unset;
+      top: unset;
+      left: unset;
+      transform: unset;
+    }
+
+    .unsupported_message {
+      display: flex;
+
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .ai_teaser {
+      position: unset;
+      top: unset;
+      left: unset;
+      transform: unset;
+    }
   }
 }

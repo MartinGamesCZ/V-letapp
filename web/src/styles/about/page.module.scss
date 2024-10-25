@@ -59,3 +59,43 @@
     }
   }
 }
+
+@media screen and (max-width: 1000px) {
+  .root {
+    padding: 1rem !important;
+    padding-top: calc($nav_height + 1rem) !important;
+
+    h1 {
+      font-size: 3rem;
+      text-align: start;
+
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    p {
+      font-size: 1.4rem;
+      width: 100%;
+    }
+
+    .tmember {
+      width: 100%;
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      .links {
+        gap: 0.5rem;
+
+        a {
+          font-size: 1.2rem;
+        }
+      }
+
+      p {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}

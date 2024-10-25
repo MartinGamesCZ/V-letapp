@@ -8,6 +8,7 @@
 
   display: flex;
   flex-direction: row;
+  align-items: center;
 
   padding: 0 2rem;
 
@@ -53,5 +54,71 @@
     transform: translate(-50%, -50%);
 
     width: 500px;
+  }
+
+  .hamburger {
+    display: none;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 64px;
+    height: 64px;
+
+    margin-left: auto;
+  }
+
+  .mobMenu {
+    position: fixed;
+    top: $nav_height;
+    right: 0;
+
+    z-index: 100;
+
+    width: 100vw;
+    height: 100vh;
+
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    background: hsl(var(--background));
+    opacity: 0.95;
+    //backdrop-filter: blur(15px);
+
+    padding: 2rem;
+
+    transition: right 0.8s;
+
+    border-left: 1px solid #ddd;
+
+    a {
+      font-size: 1.4rem;
+      color: hsl(var(--text));
+    }
+
+    &[data-open="false"] {
+      right: -100vw;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .root {
+    .search {
+      display: none;
+    }
+
+    .links {
+      display: none;
+    }
+
+    .hamburger {
+      display: flex;
+    }
+
+    .mobMenu {
+      display: flex;
+    }
   }
 }

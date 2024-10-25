@@ -18,6 +18,9 @@ export default function Home() {
         <h1>Výletapp</h1>
         <p>Výlety na pár kliknutí...</p>
         <Searchbar />
+        <div className={styles.unsupported_message}>
+          Pro využití plánovače otevřete stránku na počítači.
+        </div>
         <p className={styles.ai_teaser}>Plánování pomocí AI je ve vývoji.</p>
       </div>
     </main>

@@ -31,6 +31,10 @@ export default async function Page({
 
   return (
     <main className={styles.root}>
+      <div className={styles.unsupported_message}>
+        Plánovač ještě není přizpůsobený pro mobilní zařízení. Prosím, otevřete
+        stránku na počítači.
+      </div>
       <Context places={places} category={category} />
     </main>
   );
