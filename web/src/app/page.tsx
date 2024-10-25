@@ -12,13 +12,16 @@ import HomepageSearchField from "@/components/HomepageSearchField/HomepageSearch
 import Searchbar from "@/components/Searchbar/Searchbar";
 
 export default function Home() {
-  return <main className={styles.root}>
-    <div className={styles.heading}>
-      <h1>Výletapp</h1>
-      <p>Výlety na pár kliknutí...</p>
-      <Searchbar />
-    </div>
-  </main>;
+  return (
+    <main className={styles.root}>
+      <div className={styles.heading}>
+        <h1>Výletapp</h1>
+        <p>Výlety na pár kliknutí...</p>
+        <Searchbar />
+        <p className={styles.ai_teaser}>Plánování pomocí AI je ve vývoji.</p>
+      </div>
+    </main>
+  );
 }
 
 /**

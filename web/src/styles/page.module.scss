@@ -37,4 +37,24 @@
     left: 50%;
     transform: translate(-50%, -50%) scale(1.4);
   }
+
+  .ai_teaser {
+    position: fixed;
+
+    top: calc(80%);
+    left: 50%;
+
+    max-height: 1rem;
+
+    transform: translate(-50%, -50%);
+
+    color: #323232;
+
+    background: linear-gradient(45deg, #f38f2b, #f38f2b, #ff1256);
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    font-weight: 700;
+  }
 }
