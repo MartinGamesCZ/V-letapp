@@ -22,7 +22,7 @@ export class RouterService {
       places.push(p);
     }
 
-    const router = new Geobee.TSP(new Geobee.OSRM('http://10.5.0.4:5000'));
+    const router = new Geobee.TSP(new Geobee.OSRM(process.env.ROUTER_HOST));
 
     const route = await router.findRoute(
       [location, ...places.map((p) => [p.latitude, p.longitude])].map((v) =>
@@ -49,7 +49,7 @@ export class RouterService {
       places.push(p);
     }
 
-    const router = new Geobee.TSP(new Geobee.OSRM('http://10.5.0.4:5000'));
+    const router = new Geobee.TSP(new Geobee.OSRM(process.env.ROUTER_HOST));
 
     const route = await router.find(
       [location, ...places.map((p) => [p.latitude, p.longitude])].map((v) =>

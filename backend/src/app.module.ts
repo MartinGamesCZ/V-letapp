@@ -13,11 +13,11 @@ import PlaceEmbeddings from './db/entities/PlaceEmbeddings';
   imports: [
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: '10.5.0.5',
+      host: process.env.POSTGRES_HOST,
       port: 5432,
-      username: 'root',
+      username: process.env.POSTGRES_USER,
       password: process.env.POSTGRES_PASSWORD,
-      database: 'data',
+      database: process.env.POSTGRES_DB,
       synchronize: true,
       entities: [Place, Category, PlaceEmbeddings],
     }),

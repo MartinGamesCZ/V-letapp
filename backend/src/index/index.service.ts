@@ -80,7 +80,7 @@ export class IndexService {
       .createQueryBuilder()
       .select('*')
       .from(PlaceEmbeddings, 'place_embeddings')
-      .orderBy('embeddings <-> :embedding')
+      .orderBy('embeddings <#> :embedding')
       .setParameters({
         embedding: pgvector.toSql(data?.embeddings ? data.embeddings[0] : []),
       })
