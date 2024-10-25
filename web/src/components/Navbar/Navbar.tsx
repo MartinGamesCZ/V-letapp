@@ -5,7 +5,7 @@ import Link from "next/link";
 import styles from "./Navbar.module.scss";
 import Searchbar from "../Searchbar/Searchbar";
 import { TbMenu } from "react-icons/tb";
-import { useState } from "react";
+import { Suspense, useState } from "react";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,7 +15,9 @@ export default function Navbar() {
       <div className={styles.logo}>
         <h3>Výletapp</h3>
       </div>
-      <Searchbar className={styles.search} />
+      <Suspense fallback={<></>}>
+        <Searchbar className={styles.search} />
+      </Suspense>
       <div className={styles.links}>
         <Link href="/">Domů</Link>
         <Link href="/planner">Plánovač</Link>

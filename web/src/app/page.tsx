@@ -10,6 +10,7 @@ import { TbMapPins } from "react-icons/tb";
 import { TbUser } from "react-icons/tb";
 import HomepageSearchField from "@/components/HomepageSearchField/HomepageSearchField";
 import Searchbar from "@/components/Searchbar/Searchbar";
+import { Suspense } from "react";
 
 export default function Home() {
   return (
@@ -17,7 +18,9 @@ export default function Home() {
       <div className={styles.heading}>
         <h1>Výletapp</h1>
         <p>Výlety na pár kliknutí...</p>
-        <Searchbar />
+        <Suspense fallback={<></>}>
+          <Searchbar />
+        </Suspense>
         <div className={styles.unsupported_message}>
           Pro využití plánovače otevřete stránku na počítači.
         </div>

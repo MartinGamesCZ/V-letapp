@@ -38,15 +38,15 @@ export default function Context(props: IContextProps) {
   const trip = useStore(useDataStore, (s) => s.trip);
 
   useEffect(() => {
-    Geobee.geolocate().then((loc) => {
-      setULoc([loc.lat, loc.lon]);
+    /*Geobee.geolocate().then((loc) => {
+      setULoc([loc.lat, loc.lon]);*/
 
-      if (typeof window != "undefined") {
-        window.navigator.geolocation.getCurrentPosition((p) => {
-          setULoc([p.coords.latitude, p.coords.longitude]);
-        });
-      }
-    });
+    if (typeof window != "undefined") {
+      window.navigator.geolocation.getCurrentPosition((p) => {
+        setULoc([p.coords.latitude, p.coords.longitude]);
+      });
+    }
+    //});
   }, []);
 
   useEffect(() => {
