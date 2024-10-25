@@ -6,55 +6,45 @@ import { TbTargetArrow } from "react-icons/tb";
 
 export default function Page() {
   return (
-    <div className={styles.aboutPageContent}>
-      <Image
-        className={styles.background}
-        width={1920}
-        height={1080}
-        alt=""
-        src="/images/Background.png"
-      ></Image>
-      <h2>O nás</h2>
-      <div className={styles.separatorLine}></div>
-      <div className={styles.aboutUsItems}>
-        <div className={styles.aboutUsItem}>
-          <TbUsersGroup className={styles.aboutIcons}></TbUsersGroup>
-          <h3>O nás</h3>
-          <p>
-            Jsme druháci z VOŠ a SPŠ Jicín a věříme, že každý okamžik by měl být
-            jedinečný a bez stresu.
-          </p>
+    <main className={styles.root}>
+      <h1>O nás</h1>
+      <p>
+        Jsme tým studentů z 2. ročníku (podzim 2024) oboru informační
+        technologie na <a href="https://prumyslovkajicin.cz">VOŠ a SPŠ Jičín</a>
+        .
+      </p>
+      <div className={styles.tmember}>
+        <h2>Martin Petr</h2>
+        <div className={styles.links}>
+          <a href="https://www.mpdev.tech">Web</a>
+          <a href="https://github.com/MartinGamesCZ">GitHub</a>
         </div>
-        <div className={styles.aboutUsItem}>
-          <TbEyeglass2 className={styles.aboutIcons}></TbEyeglass2>
-          <h3>Naše vize</h3>
-          <p>
-            Chceme nabídnout lidem možnost naplánování výletů a dobrodružství
-            pomocí jednoho kliknutí myši.
-          </p>
-        </div>
+        <p>
+          &gt; Frontend plánovače + nové verze stránek 'Domů' a 'O nás',
+          backend, hosting, údržba, technické vedení týmu
+        </p>
       </div>
-      <div className={styles.aboutUsItems}>
-        <div className={styles.aboutUsItem}>
-          <TbTargetArrow className={styles.aboutIcons}></TbTargetArrow>
-          <h3>Naše cíle</h3>
-          <p>
-            Cílem naší aplikace je okamžitě navrhnout výlety a další aktivity na
-            míru vašim zájmům.
-          </p>
+      <div className={styles.tmember}>
+        <h2>Filip Zima</h2>
+        <div className={styles.links}>
+          <a href="https://github.com/Retrofilip1">GitHub</a>
         </div>
+        <p>&gt; Původní stránka 'Domů' a 'O nás'</p>
       </div>
-      <svg
-        className={styles.wave}
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 1440 320"
-      >
-        <path
-          fill="#1d4ed8"
-          fillOpacity="1"
-          d="M0,256L48,256C96,256,192,256,288,234.7C384,213,480,171,576,154.7C672,139,768,149,864,165.3C960,181,1056,203,1152,202.7C1248,203,1344,181,1392,170.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-        ></path>
-      </svg>
-    </div>
+      <div className={styles.tmember}>
+        <h2>David Stuchlík</h2>
+        <div className={styles.links}>
+          <a href="https://github.com/Dejv1s">GitHub</a>
+        </div>
+        <p>
+          &gt; Design původní stránky 'Domů' a 'O nás', management a vedení týmu
+        </p>
+      </div>
+      <div className={styles.tmember}>
+        <h2>Michal Pešek</h2>
+        <div className={styles.links}></div>
+        <p>&gt; Design původní stránky 'Domů' a 'O nás'</p>
+      </div>
+    </main>
   );
 }

@@ -1,70 +1,61 @@
-.wave {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    z-index: 0;
-}
+@import "@/styles/config.scss";
 
-.aboutPageContent {
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.root {
+  width: 100vw;
+  height: 100vh;
+
+  padding: 1rem;
+  padding-top: calc($nav_height + 4rem);
+  padding-bottom: 4rem;
+
+  h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+
+    margin-top: 2rem;
+
+    text-align: center;
+  }
+
+  p {
+    font-size: 2rem;
+
+    width: 50vw;
+
+    margin: 0 auto;
+
+    a {
+      opacity: 0.75;
+      text-decoration: underline;
+    }
+  }
+
+  .tmember {
+    width: 50vw;
+
+    margin: 0 auto;
+    margin-top: 2rem;
+
     h2 {
-        font-weight: 700;
-        margin-top: 20px;
-        font-size: 42px;
+      font-size: 2.5rem;
+      font-weight: 700;
+
+      line-height: 1;
     }
-}
 
-.aboutUsItems {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
+    .links {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
 
-.aboutUsItem {
-    margin-left: 50px;
-    margin-right: 50px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    border-radius: 35px;
-    width: 512px;
-    height: 180px;
-    background-color: #353535;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    z-index: 2;
-    color: #fff;
+      margin-bottom: 1rem;
 
-    h3 {
-        font-size: 30px;
+      a {
+        font-size: 1.4rem;
+        opacity: 0.75;
+        text-decoration: underline;
+      }
     }
-    p {
-        font-size: 20px;
-        text-align: center;
-    }
-}
-
-.aboutIcons {
-    margin-right: 250px;
-    margin-bottom: -70px;
-    width: 50px;
-    height: 50px;
-}
-
-.separatorLine {
-    width: 300px;
-    border-bottom: 1px solid #000;
-}
-
-.background {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    opacity: 0.65;
-    z-index: -1;
+  }
 }

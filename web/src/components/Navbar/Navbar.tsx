@@ -13,7 +13,7 @@ export default function Navbar() {
       <div className={styles.links}>
         <Link href="/">Domů</Link>
         <Link href="/planner">Plánovač</Link>
-        <Link href="/map">O nás</Link>
+        <Link href="/about">O nás</Link>
       </div>
     </nav>
   );
